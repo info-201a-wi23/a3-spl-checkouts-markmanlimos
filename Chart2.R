@@ -9,7 +9,8 @@ spl_df <- read.csv("2022-2023-All-Checkouts-SPL-Data.csv", stringsAsFactors = FA
 # then converts them to date
 spl_df <- spl_df %>% mutate(date = as.Date(paste0(CheckoutYear, '-', CheckoutMonth,'-01'),'%Y-%m-%d'))
 
-# Purpose of chart: compare checkout rates of 3 checkout types (Book, Ebook, and Audiobook) over months in 2022
+# Purpose of chart: 
+# compare checkout rates of 3 checkout types (Book, Ebook, and Audiobook) over months in 2022
 
 # filter for the 3 book types and other relevant data
 
