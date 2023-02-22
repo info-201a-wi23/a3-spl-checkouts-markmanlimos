@@ -43,13 +43,30 @@ material_totals <- spl_df %>%
 material_totals_min <- spl_df %>% 
   group_by(MaterialType) %>%
   summarize(totals =  sum(Checkouts)) %>%
-  filter(totals == min(totals))
+  filter(totals == min(totals)) %>%
+  pull(MaterialType)
 
 material_totals
-material_totals_min
 
 # Fourth Summary Info:
-# Question: 
+# Question: What Book was the most checked out in 2022?
+
+book_most_checked <- spl_df %>%
+  filter(date == as.Date("2022-09-01")) %>%
+  group_by(Title) %>%
+  summarize(most_checkedout = max(Checkouts)) %>%
+  filter(most_checkedout == max(most_checkedout)) %>%
+  pull(Title)
+
 
 # Fifth Summary Info:
-# Question: 
+# Question: What month had the biggest largest increase in checkouts in 2022?
+
+largest_monthly_checkouts <- spl_df %>%
+  filter(CheckoutYear == 2022) %>%
+  group_by(CheckoutMonth) %>%
+  summarize(total_checkouts = sum(Checkouts)) %>%
+  mutate(delta_checkout = total_checkouts - lag(total_checkouts)) %>%
+  filter(delta_checkout == max(delta_checkout, na.rm = TRUE)) %>%
+  pull(CheckoutMonth)
+  
