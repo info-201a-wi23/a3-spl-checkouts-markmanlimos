@@ -28,7 +28,7 @@ ggplot(data = pj_hp_lotr_df) +
   geom_point(mapping = aes(x = CheckoutMonth, y = creator_total, col = Creator)) +
   geom_line(mapping = aes(x = CheckoutMonth, y = creator_total, col = Creator)) +
   labs(
-    title = "Monthly Checkouts by These 3 Authors",
+    title = "Monthly Checkouts by These 3 Authors in 2022",
     x = "Month",
     y = "Number of Checkouts"
   ) +
