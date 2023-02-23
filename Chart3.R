@@ -50,5 +50,6 @@ ggplot(data = hp_df_class, aes(fill = UsageClass, y = total_book_checkouts, x = 
   labs(
     title = "Medium of Checkouts for the 7 Harry Potter Books",
     x = "Book Name",
-    y = "Number of Checkouts"
-  )
+    y = "Number of Checkouts",
+    fill = "Checkout Type"
+  ) 
