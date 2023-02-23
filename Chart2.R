@@ -27,7 +27,8 @@ ggplot(data = material_checkouts, aes(fill = MaterialType, y = material_total, x
   labs(
     title = "Comparing Medium of Checkouts by Month in 2022",
     x = "Checkout Month",
-    y = "Number of Checkouts"
+    y = "Number of Checkouts",
+    fill = "Book Medium"
   ) +
   scale_x_continuous(breaks = seq(1,12,1)) +
   scale_y_continuous(labels = label_number_si())
