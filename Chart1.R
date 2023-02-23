@@ -30,7 +30,8 @@ ggplot(data = pj_hp_lotr_df) +
   labs(
     title = "Monthly Checkouts by These 3 Authors in 2022",
     x = "Month",
-    y = "Number of Checkouts"
+    y = "Number of Checkouts",
+    col = "Author"
   ) +
   scale_x_continuous(breaks = seq(1,12,1))
 
