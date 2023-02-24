@@ -26,7 +26,7 @@ My report will connect the three of these focuses and analyze information taken 
 ``````{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("summary.R")}
 ```
 
-Based on this data, I was able to conclude that in 2022, *`r largest_monthly_checkouts`*
+Based on this data, I was able to conclude that in 2022, **`r largest_monthly_checkouts`**
 
 ### The Dataset
 
@@ -55,7 +55,7 @@ When we say "clear" or "human readable" titles and labels, that means that you s
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
-``````{r, echo = FALSE, warning = FALSE, code = readLines("Chart1.R")}
+``````{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("Chart1.R")}
 ```
 
 ### Second Trends Over Time Chart
@@ -75,7 +75,7 @@ When we say "clear" or "human readable" titles and labels, that means that you s
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
-``````{r, echo = FALSE, code = readLines("Chart2.R")}
+``````{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("Chart2.R")}
 ```
 
 ### Your Choice
@@ -88,7 +88,7 @@ The last chart is up to you. It could be a line plot, scatter plot, histogram, b
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
-``````{r, echo = FALSE, code = readLines("Chart3.R")}
+``````{r, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 12, code = readLines("Chart3.R")}
 ```
 
 
