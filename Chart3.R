@@ -14,6 +14,7 @@ spl_df <- spl_df %>% mutate(date = as.Date(paste0(CheckoutYear, '-', CheckoutMon
 
 # creating a dataframe of all the harry potter books
 # i may have to hardcode the names just because I dont know how to do it otherwise
+# changed all titles to lowercase to make it easier
 # THIS IS the tedius work to get the names the same for all books
 hp_df <- spl_df %>%
   mutate(Title = tolower(Title)) %>%
@@ -21,6 +22,7 @@ hp_df <- spl_df %>%
   mutate(title_simple = '')
 
 # removed "harry potter and the" so that my graphics labels didn't overlap
+# chose key words from each book title then mutated my added column to change to the book names
 hp_df$title_simple[str_detect(hp_df$Title, "sorcerer")] <- "Sorcerer's Stone"
 hp_df$title_simple[str_detect(hp_df$Title, "chamber")] <- "Chamber of Secrets"
 hp_df$title_simple[str_detect(hp_df$Title, "prisoner")] <- "Prisoner of Azkaban"

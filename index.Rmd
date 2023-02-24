@@ -1,24 +1,30 @@
 ---
-title: "A3: SPL Library Checkouts"
+title: "Seattle Public Library Trends of My Favorite Childhood Authors"
+author: "Mark Manlimos"
+date: "2/24/2023"
 output: html_document
 ---
 
 ### Introduction
 
-An introduction of the data and a description of the trends/books/items you are choosing to analyze (and why!)
+Once an integral part of my youth education, going to the library has become more optional and therefore inconvenient for my education. With the accelerated rise of technology as a medium for knowledge, libraries have become underutilized by myself an much of the youth. As a kid I loved to read the Rick Riordan's "Percy Jackson" and "The Kane Chronicles" series and J.K. Rowling's "Harry Potter" series. As I aged into late middle school, I really got into J.R.R Tolkien's "Lord of the Rings" series. 
+
+This report looks to explore the trends of book Mediums and compare how people take in books nowadays. I also am interested in seeing how my favorite books as a kid compare to each other today and to see what medium people are choosing to absorb these books through.
+
+I will focus on:
+
+- Authors:
+  - Specifically the three mentioned above
+- Book Medium:
+  - This will look different in different sections. Sometimes I will focus on specific mediums such as EBOOKS and audio books, and sometimes I will focus on just digital vs. physical
+- Time:
+  - The element of time will only pertain to the year 2022 as that is the limitation of my data set. 
+  
+My report will connect the three of these focuses and analyze information taken from combinations of the three.
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
 
-These will likely be calculated using your DPLYR skills, answering questions such as:
-
-- What is the average number of checkouts for each item?
-- What is the month or year with the most/least checkouts for a book that you're interested in?
-- What is the month or year with the most/least checkouts for ebooks?
-- How has the number of print book checkouts changed over time?
-
-Feel free to calculate and report values that you find relevant.
 
 ### The Dataset
 
@@ -39,7 +45,7 @@ The first chart that you will create and include will show the trend over time o
 - Show more than one, but fewer than ~10 trends
   - For example, two books, or 5 different mediums
 - You must have clear x and y axis labels
-- The chart needs a clear title 
+- The chart needs a clear title
 - You need a legend for your different line colors and a clear - legend title
 In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
 
@@ -47,7 +53,7 @@ When we say "clear" or "human readable" titles and labels, that means that you s
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
-``````{r, echo = FALSE, warning = FALSE, code = readLines("chart1_example.R")}
+``````{r, echo = FALSE, warning = FALSE, code = readLines("Chart1.R")}
 ```
 
 ### Second Trends Over Time Chart
@@ -59,7 +65,7 @@ The second chart that you will create and include will show another trend over t
 - Show more than one, but fewer than ~10 trends
   - For example, two books, or 5 different mediums
 - You must have clear x and y axis labels
-- The chart needs a clear title 
+- The chart needs a clear title
 - You need a legend for your different line colors and a clear - legend title
 In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
 
@@ -67,7 +73,7 @@ When we say "clear" or "human readable" titles and labels, that means that you s
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+``````{r, echo = FALSE, code = readLines("Chart2.R")}
 ```
 
 ### Your Choice
@@ -75,12 +81,12 @@ Here's an example of how to run an R script inside an RMarkdown file:
 The last chart is up to you. It could be a line plot, scatter plot, histogram, bar plot, stacked bar plot, and more. Here are some requirements to help guide your design:
 
 - You must have clear x and y axis labels
-- The chart needs a clear title 
+- The chart needs a clear title
 - You need a legend for your different line colors and a clear legend title
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+``````{r, echo = FALSE, code = readLines("Chart3.R")}
 ```
 
 

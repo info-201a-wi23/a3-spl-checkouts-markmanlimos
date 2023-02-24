@@ -1,6 +1,5 @@
 library(dplyr)
 library(stringr)
-library(ggplot2)
 
 # Loading in data set (3rd)
 spl_df <- read.csv("2022-2023-All-Checkouts-SPL-Data.csv", stringsAsFactors = FALSE)
@@ -11,13 +10,29 @@ spl_df <- spl_df %>% mutate(date = as.Date(paste0(CheckoutYear, '-', CheckoutMon
 
 # First Summary Info:
 # Question: What month has the least amount of physical book checkouts?
-
-least_physical_month <- spl_df %>% 
-  group_by(date) %>%
+# making a new dataframe for names of months just for this summary statistic I dont want to graph with categorical
+# months.
+month_df <- spl_df
+month_df["CheckoutMonth"][month_df["CheckoutMonth"] == 1] <- "January"
+month_df["CheckoutMonth"][month_df["CheckoutMonth"] == 2] <- "February"
+month_df["CheckoutMonth"][month_df["CheckoutMonth"] == 3] <- "March"
+month_df["CheckoutMonth"][month_df["CheckoutMonth"] == 4] <- "April"
+month_df["CheckoutMonth"][month_df["CheckoutMonth"] == 5] <- "May"
+month_df["CheckoutMonth"][month_df["CheckoutMonth"] == 6] <- "June"
+month_df["CheckoutMonth"][month_df["CheckoutMonth"] == 7] <- "July"
+month_df["CheckoutMonth"][month_df["CheckoutMonth"] == 8] <- "August"
+month_df["CheckoutMonth"][month_df["CheckoutMonth"] == 9] <- "September"
+month_df["CheckoutMonth"][month_df["CheckoutMonth"] == 10] <- "October"
+month_df["CheckoutMonth"][month_df["CheckoutMonth"] == 11] <- "November"
+month_df["CheckoutMonth"][month_df["CheckoutMonth"] == 12] <- "December"
+                
+least_physical_month <- month_df %>% 
+  filter(CheckoutYear == 2022) %>%
+  group_by(CheckoutMonth) %>%
   filter(MaterialType == "BOOK") %>%
   summarize(total_physical_checkouts = sum(Checkouts)) %>%
   filter(total_physical_checkouts == min(total_physical_checkouts)) %>%
-  pull(date)
+  pull(CheckoutMonth)
 
 least_physical_month
 
@@ -62,7 +77,7 @@ book_most_checked <- spl_df %>%
 # Fifth Summary Info:
 # Question: What month had the biggest largest increase in checkouts in 2022?
 
-largest_monthly_checkouts <- spl_df %>%
+largest_monthly_checkouts <- month_df %>%
   filter(CheckoutYear == 2022) %>%
   group_by(CheckoutMonth) %>%
   summarize(total_checkouts = sum(Checkouts)) %>%
@@ -70,3 +85,4 @@ largest_monthly_checkouts <- spl_df %>%
   filter(delta_checkout == max(delta_checkout, na.rm = TRUE)) %>%
   pull(CheckoutMonth)
   
+largest_monthly_checkouts
