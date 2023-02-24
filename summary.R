@@ -34,8 +34,6 @@ least_physical_month <- month_df %>%
   filter(total_physical_checkouts == min(total_physical_checkouts)) %>%
   pull(CheckoutMonth)
 
-least_physical_month
-
 # Second Summary Info:
 # Question: How has Rick Riordan's checkouts changed over the months?
 
@@ -45,7 +43,6 @@ rick_riordan_df <- spl_df %>%
 rr_checkouts_per_month <- rick_riordan_df %>% 
   group_by(date) %>%
   summarize(total_checkouts = sum(Checkouts))
-rr_checkouts_per_month
 
 # Third Summary Info:
 # Question: How many total checkouts are there for each material type? 
@@ -61,7 +58,6 @@ material_totals_min <- spl_df %>%
   filter(totals == min(totals)) %>%
   pull(MaterialType)
 
-material_totals
 
 # Fourth Summary Info:
 # Question: What Book was the most checked out in 2022?
@@ -84,5 +80,3 @@ largest_monthly_checkouts <- month_df %>%
   mutate(delta_checkout = total_checkouts - lag(total_checkouts)) %>%
   filter(delta_checkout == max(delta_checkout, na.rm = TRUE)) %>%
   pull(CheckoutMonth)
-  
-largest_monthly_checkouts

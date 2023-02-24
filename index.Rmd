@@ -23,8 +23,10 @@ I will focus on:
 My report will connect the three of these focuses and analyze information taken from combinations of the three.
 
 ### Summary Information
+``````{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("summary.R")}
+```
 
-
+Based on this data, I was able to conclude that in 2022, *`r largest_monthly_checkouts`*
 
 ### The Dataset
 
