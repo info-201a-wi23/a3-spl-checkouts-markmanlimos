@@ -35,29 +35,30 @@ least_physical_month <- month_df %>%
   pull(CheckoutMonth)
 
 # Second Summary Info:
-# Question: How has Rick Riordan's checkouts changed over the months?
+# Question: what was rick riordans most checked out book?
 
 rick_riordan_df <- spl_df %>% 
   filter(str_detect(Creator, "Rick")) %>%
   filter(str_detect(Creator, 'Riordan'))
 rr_checkouts_per_month <- rick_riordan_df %>% 
-  group_by(date) %>%
-  summarize(total_checkouts = sum(Checkouts))
+  group_by(Title) %>%
+  summarize(total_checkouts = sum(Checkouts)) %>%
+  filter(total_checkouts == max(total_checkouts)) %>%
+  pull(Title)
 
 # Third Summary Info:
 # Question: How many total checkouts are there for each material type? 
-# which type(s) has the most least checkouts? How many checkouts were there?
+# which type(s) has the most most checkouts?
 
 material_totals <- spl_df %>% 
   group_by(MaterialType) %>%
   summarize(totals =  sum(Checkouts)) %>%
   arrange(-totals)
-material_totals_min <- spl_df %>% 
+material_totals_max <- spl_df %>% 
   group_by(MaterialType) %>%
   summarize(totals =  sum(Checkouts)) %>%
-  filter(totals == min(totals)) %>%
+  filter(totals == max(totals)) %>%
   pull(MaterialType)
-
 
 # Fourth Summary Info:
 # Question: What Book was the most checked out in 2022?

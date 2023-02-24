@@ -26,7 +26,11 @@ My report will connect the three of these focuses and analyze information taken 
 ``````{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("summary.R")}
 ```
 
-Based on this data, I was able to conclude that in 2022, **`r largest_monthly_checkouts`**
+Based on this data, I was able to conclude that in 2022, **`r largest_monthly_checkouts`** was the month that had the highest increase in checkouts from the month before. Also, **`r least_physical_month`** was the month where the least amount of physical books was checked out in. 
+
+I was also able to find out that throughout the entire year it is still the medium of **`r material_totals_max`** . And out of these books, **`r book_most_checked`** was the most checked out book. 
+
+I also chose to take a look at one of my favorite authors as a child. Of Rick Riordan's books, **`r rr_checkouts_per_month`** was the most checked out book in 2022.
 
 ### The Dataset
 
