@@ -35,6 +35,7 @@ I also chose to take a look at one of my favorite authors as a child. Of Rick Ri
 ### The Dataset
 
 This data set is a portion of a larger dataset provided by Seattle Public Library. The larger dataset covers all checkouts for both physical and electronic items since April 2005, and it measures these checkouts monthly on the 6th of each month. The portion that I am looking at is from the year 2022. The data is sourced from Legrady artwork data archives as well as Horizon ILS (this is where my portion of the data comes from). Some ethical questions I need to consider when working with this data is what is the intended use of the data and am I adhering to this intent. I think that my report is exactly what this dataset should be used for. Some possible limitations of this dataset however are that it only measures initial checkout and doesn't consider renewals which may skew data away from longer reads or books that are further in a series if a person chooses to check out the whole series at once.
+
 ### First Trends Over Time Chart
 
 ``````{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("Chart1.R")}
