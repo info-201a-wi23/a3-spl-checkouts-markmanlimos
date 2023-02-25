@@ -34,65 +34,42 @@ I also chose to take a look at one of my favorite authors as a child. Of Rick Ri
 
 ### The Dataset
 
-- Who collected/published the data?  
-- What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
-- How was the data collected or generated?  
-- Why was the data collected?  
-- What, if any, ethical questions do you need to consider when working with this data?  
-- What are possible limitations or problems with this data?   (at least 200 words)
-
-
+This data set is a portion of a larger dataset provided by Seattle Public Library. The larger dataset covers all checkouts for both physical and electronic items since April 2005, and it measures these checkouts monthly on the 6th of each month. The portion that I am looking at is from the year 2022. The data is sourced from Legrady artwork data archives as well as Horizon ILS (this is where my portion of the data comes from). Some ethical questions I need to consider when working with this data is what is the intended use of the data and am I adhering to this intent. I think that my report is exactly what this dataset should be used for. Some possible limitations of this dataset however are that it only measures initial checkout and doesn't consider renewals which may skew data away from longer reads or books that are further in a series if a person chooses to check out the whole series at once.
 ### First Trends Over Time Chart
-
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The first chart that you will create and include will show the trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
 
 ``````{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("Chart1.R")}
 ```
 
+#### Purpose
+
+The purpose of this chart was the compare my 3 most read authors as a kid and see how their works compared to one another over the course of 2022
+
+#### Insights
+
+According to this chart J.K. Rowling was on average the most checked out author in 2022 (between these three). You can also see that besides J.R.R Tolkien, the checkouts of the books decreases throughout the year.
+
 ### Second Trends Over Time Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The second chart that you will create and include will show another trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("Chart2.R")}
+``````{r, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 10, code = readLines("Chart2.R")}
 ```
 
+#### Purpose
+
+The purpose of this chart was to compare how the number of checkouts of the 3 biggest book mediums compared throughout each month of 2022
+
+#### Insights
+
+According to the chart, audiobooks were consistently the least checked out medium in 2022. Also, apart from December, physical books were checked out most accross these three mediums.
+
 ### Your Choice
-
-The last chart is up to you. It could be a line plot, scatter plot, histogram, bar plot, stacked bar plot, and more. Here are some requirements to help guide your design:
-
-- You must have clear x and y axis labels
-- The chart needs a clear title
-- You need a legend for your different line colors and a clear legend title
-
-Here's an example of how to run an R script inside an RMarkdown file:
 
 ``````{r, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 12, code = readLines("Chart3.R")}
 ```
 
+#### Purpose
 
+The purpose of this chart was to see how much (if at all) the way of consuming one of my favorite series has changed since I was a kid. When I was a kid, reading the hardcovers of Harry Potter books gave you more status than reading the paper backs. However, now I look to compare if people even read physical books anymore. This chart was made to compare physical vs digital consumption of each Harry Potter book in the original series.
+
+#### Insights
+
+Based on the chart, across the board, in 2022, more people checked out the Harry Potter books in a digital form. This statistic was the most surprising to me, but also the most representative of where we are headed in the future.
